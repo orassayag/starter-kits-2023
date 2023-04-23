@@ -1,0 +1,70 @@
+{
+  "name": "client-nextjs-list-table-material-ui-yup-crud",
+  "version": "0.1.0",
+  "private": false,
+  "description": "Client project with next.js, material-table, yup, to show CRUD actions.",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/orassayag/###.git"
+  },
+  "keywords": [
+    "react",
+    "next.js",
+    "material-table",
+    "yup",
+    "table",
+    "list",
+    "CRUD"
+  ],
+  "author": "Or Assayag <orassayag@gmail.com>",
+  "contributors": [
+    {
+      "name": "Or Assayag",
+      "email": "orassayag@gmail.com",
+      "url": "https://github.com/orassayag"
+    }
+  ],
+  "main": "src/pages/_app.js",
+  "files": [
+    ".next",
+    ".vscode",
+    "public",
+    "src",
+    "eslintrc.json",
+    ".gitignore",
+    "INSTRUCTIONS.md",
+    "jsconfig.json",
+    "next.config.js",
+    "package-lock.json",
+    "package.json",
+    "README.md"
+  ],
+  "scripts": {
+    "dev": "npm run open-browser && next dev",
+    "open-browser": "start http://localhost:3000",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.21.3",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-no-inline-styles": "^1.0.5",
+    "eslint-plugin-security": "^1.7.1"
+  },
+  "dependencies": {
+    "@mui/icons-material": "^5.11.16",
+    "@mui/material": "^5.12.1",
+    "@mui/system": "^5.12.1",
+    "axios": "^1.3.5",
+    "eslint": "8.38.0",
+    "eslint-config-next": "13.3.0",
+    "next": "13.3.0",
+    "prop-types": "^15.8.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-router-dom": "^6.10.0",
+    "sass": "^1.62.0",
+    "yup": "^1.1.1"
+  }
+}
