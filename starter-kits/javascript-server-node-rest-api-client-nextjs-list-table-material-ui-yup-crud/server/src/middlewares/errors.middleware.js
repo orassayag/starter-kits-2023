@@ -2,7 +2,7 @@ import CONSTANTS from '../config/constants.config.js';
 import LoggerService from '../services/logger.service.js';
 import CustomError from '../custom/error.custom.js';
 
-class ErrorsMiddleware {
+export default class ErrorsMiddleware {
   constructor() {
     throw new CustomError({ message: 'Cannot create an instance of a static class' });
   }
@@ -20,11 +20,6 @@ class ErrorsMiddleware {
     const error = err;
     // Render the error JSON.
     if (error.error && error.error.isJoi) {
-      /* Is an API validation error thrown by Joi.
-         Strip out the custom part of the Joi error message, otherwise the returned message is
-         eg: 'Error parsing request params. "<field name>" is required' so the text returned
-         to the client is simply eg: "<field name>" is required".
-         - https://github.com/evanshortiss/express-joi-validation */
       error.message = error.error.details[0].message;
       error.status = 400;
     } else if (err.message === CONSTANTS.NOT_FOUND) {
@@ -61,5 +56,3 @@ class ErrorsMiddleware {
     return next(new CustomError({ message: `Page not found: ${req.path} via: ${req.method}`, status: 404 }));
   }
 }
-
-export default ErrorsMiddleware;

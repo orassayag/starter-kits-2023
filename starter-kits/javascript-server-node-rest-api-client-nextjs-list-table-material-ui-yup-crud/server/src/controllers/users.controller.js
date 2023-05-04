@@ -1,7 +1,7 @@
-import UsersModel from '../models/users.model.js';
+import UsersModel from '../models/user/users.model.js';
 import CustomError from '../custom/error.custom.js';
 
-class UsersController {
+export default class UsersController {
   constructor() {
     throw new CustomError({ message: 'Cannot create an instance of a static class' });
   }
@@ -30,7 +30,7 @@ class UsersController {
   static async get(req, res, next) {
     try {
       const results = await UsersModel.get(req.query);
-      return res.status(200).json(results);
+      return res.json(results);
     } catch (error) {
       return next(error);
     }
@@ -49,7 +49,7 @@ class UsersController {
   static async getById(req, res, next) {
     try {
       const result = await UsersModel.getById(req.params.id);
-      return res.status(200).json(result);
+      return res.json(result);
     } catch (error) {
       return next(error);
     }
@@ -68,7 +68,7 @@ class UsersController {
   static async create(req, res, next) {
     try {
       const result = await UsersModel.create(req.body);
-      return res.status(200).json(result);
+      return res.json(result);
     } catch (error) {
       return next(error);
     }
@@ -88,7 +88,7 @@ class UsersController {
   static async update(req, res, next) {
     try {
       const result = await UsersModel.update(req.params.id, req.body);
-      return res.status(200).json(result);
+      return res.json(result);
     } catch (error) {
       return next(error);
     }
@@ -108,11 +108,9 @@ class UsersController {
   static async remove(req, res, next) {
     try {
       const result = await UsersModel.remove(req.params.id);
-      return res.status(200).json(result);
+      return res.json(result);
     } catch (error) {
       return next(error);
     }
   }
 }
-
-export default UsersController;

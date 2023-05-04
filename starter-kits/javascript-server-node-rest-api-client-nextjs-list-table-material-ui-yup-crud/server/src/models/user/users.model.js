@@ -1,8 +1,8 @@
-import DataUtils from '../utils/data.utils.js';
-import userSchema from '../schemas/user.schema.js';
-import CustomError from '../custom/error.custom.js';
+import DataUtils from '../../utils/data.utils.js';
+import UserSchema from './user.schema.js';
+import CustomError from '../../custom/error.custom.js';
 
-class UsersModel {
+export default class UsersModel {
   constructor() {
     // Simulate the user's model from the database.
     this.users = [];
@@ -50,7 +50,7 @@ class UsersModel {
     * @return {void}
     */
   static initiate(users) {
-    this.users = users.map((DataUtils.selectProperties(userSchema)));
+    this.users = users.map((DataUtils.selectProperties(UserSchema.userFields)));
   }
 
   /**
@@ -75,8 +75,9 @@ class UsersModel {
     * @return {Promise<object>}
     */
   static async getById(id) {
+    const validateId = +id;
     // Check if the user exists in the database.
-    return this.validateUserExistence(id);
+    return this.validateUserExistence(validateId);
   }
 
   /**
@@ -111,8 +112,9 @@ class UsersModel {
     * @return {Promise<object>}
     */
   static async update(id, data) {
+    const validateId = +id;
     // Check if the user exists in the database.
-    const currentUser = await this.validateUserExistence(id);
+    const currentUser = await this.validateUserExistence(validateId);
     // Check if the user does not exist already with this email address.
     const email = data.email.trim().toLowerCase();
     await this.validateEmailExistence(currentUser.id, email);
@@ -124,7 +126,7 @@ class UsersModel {
       return user;
     });
     // Fetch the user back.
-    return this.validateUserExistence(id);
+    return this.validateUserExistence(validateId);
   }
 
   /**
@@ -136,13 +138,12 @@ class UsersModel {
     * @return {Promise<object>}
     */
   static async remove(id) {
+    const validateId = +id;
     // Check if the user exists in the database.
-    const removeUser = await this.validateUserExistence(id);
+    const removeUser = await this.validateUserExistence(validateId);
     // Delete the user from the database.
-    this.users = this.users.filter((d) => d.id !== id);
+    this.users = this.users.filter((d) => d.id !== validateId);
     // Fetch the user back.
     return removeUser;
   }
 }
-
-export default UsersModel;

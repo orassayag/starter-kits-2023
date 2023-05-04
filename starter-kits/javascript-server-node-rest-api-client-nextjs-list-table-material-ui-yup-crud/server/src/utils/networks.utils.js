@@ -2,7 +2,7 @@ import axios from 'axios';
 import CustomError from '../custom/error.custom.js';
 import LoggerService from '../services/logger.service.js';
 
-class NetworksUtils {
+export default class NetworksUtils {
   constructor() {
     throw new CustomError({ message: 'Cannot create an instance of a static class' });
   }
@@ -64,5 +64,3 @@ class NetworksUtils {
     }
   }
 }
-
-export default NetworksUtils;

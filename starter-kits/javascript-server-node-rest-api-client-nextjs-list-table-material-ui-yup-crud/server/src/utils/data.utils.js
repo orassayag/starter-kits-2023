@@ -1,6 +1,6 @@
 import CustomError from '../custom/error.custom.js';
 
-class DataUtils {
+export default class DataUtils {
   constructor() {
     throw new CustomError({ message: 'Cannot create an instance of a static class' });
   }
@@ -102,5 +102,3 @@ class DataUtils {
     };
   }
 }
-
-export default DataUtils;

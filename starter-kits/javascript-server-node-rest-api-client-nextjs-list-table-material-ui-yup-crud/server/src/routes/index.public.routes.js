@@ -2,7 +2,7 @@ import express from 'express';
 import UsersRoutes from './public/users.routes.js';
 import CustomError from '../custom/error.custom.js';
 
-class IndexPublicRoutes {
+export default class IndexPublicRoutes {
   constructor() {
     throw new CustomError({ message: 'Cannot create an instance of a static class' });
   }
@@ -19,5 +19,3 @@ class IndexPublicRoutes {
     return routes;
   }
 }
-
-export default IndexPublicRoutes;

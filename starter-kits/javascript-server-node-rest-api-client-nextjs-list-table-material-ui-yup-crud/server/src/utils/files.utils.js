@@ -2,7 +2,7 @@ import path from 'path';
 import fs from 'fs';
 import CustomError from '../custom/error.custom.js';
 
-class FilesUtils {
+export default class FilesUtils {
   constructor() {
     throw new CustomError({ message: 'Cannot create an instance of a static class' });
   }
@@ -25,5 +25,3 @@ class FilesUtils {
     }
   }
 }
-
-export default FilesUtils;

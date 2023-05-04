@@ -1,5 +1,5 @@
 import express from 'express';
-import expressJoiFactory from 'express-joi-validation';
+import JoiMiddleware from '../../middlewares/joi.middleware.js';
 import UsersController from '../../controllers/users.controller.js';
 import get from '../../validations/users/get.users.validation.js';
 import getById from '../../validations/users/getById.users.validation.js';
@@ -8,7 +8,7 @@ import update from '../../validations/users/put.users.validation.js';
 import remove from '../../validations/users/remove.users.validation.js';
 import CustomError from '../../custom/error.custom.js';
 
-class UsersRoutes {
+export default class UsersRoutes {
   constructor() {
     throw new CustomError({ message: 'Cannot create an instance of a static class' });
   }
@@ -21,7 +21,6 @@ class UsersRoutes {
     */
   static initiate() {
     const router = express.Router();
-    const validator = expressJoiFactory.createValidator({});
 
     /**
       * @swagger
@@ -93,7 +92,7 @@ class UsersRoutes {
       */
     router.get(
       '/',
-      validator.query(get),
+      JoiMiddleware.validate({ query: get }),
       UsersController.get,
     );
 
@@ -142,7 +141,7 @@ class UsersRoutes {
       */
     router.get(
       '/:id',
-      validator.params(getById),
+      JoiMiddleware.validate({ params: getById }),
       UsersController.getById,
     );
 
@@ -209,7 +208,7 @@ class UsersRoutes {
       */
     router.post(
       '/',
-      validator.body(create),
+      JoiMiddleware.validate({ body: create }),
       UsersController.create,
     );
 
@@ -283,8 +282,7 @@ class UsersRoutes {
       */
     router.put(
       '/:id',
-      validator.params(update.params),
-      validator.body(update.body),
+      JoiMiddleware.validate({ body: update.body, params: update.params }),
       UsersController.update,
     );
 
@@ -331,11 +329,9 @@ class UsersRoutes {
      */
     router.delete(
       '/:id',
-      validator.params(remove),
+      JoiMiddleware.validate({ params: remove }),
       UsersController.remove,
     );
     return router;
   }
 }
-
-export default UsersRoutes;

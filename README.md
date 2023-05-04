@@ -11,6 +11,11 @@ Built in April 2023. A boilerplate for both table and list with CRUD support, wi
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 Please note: The project is not finished yet and has been prospered until further notification.
 
+client-nextjs-list-table-material-ui-yup-crud-custom-hooks -
+Built in April 2023. A boilerplate for both table and list with CRUD support, with material UI and yup and custom hooks. The client built in React,
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Please note: The project is not finished yet and has been prospered until further notification.
+
 javascript-server-node-rest-api-client-nextjs-list-table-material-ui-yup-crud - 2 projects:
 client - Same as client-nextjs-list-table-material-ui-yup-crud with adjustments for the server.
 server - Built in April 2023. A boilerplate for for server side, a node server to serve simple CRUD actions with simulating real database, dummy database provided by https://dummyjson.com/.

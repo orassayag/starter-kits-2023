@@ -1,7 +1,7 @@
 import CONSTANTS from '../config/constants.config.js';
 import CustomError from '../custom/error.custom.js';
 
-class AppsUtils {
+export default class AppsUtils {
   constructor() {
     throw new CustomError({ message: 'Cannot create an instance of a static class' });
   }
@@ -18,5 +18,3 @@ class AppsUtils {
       || environment?.trim().toLowerCase() === CONSTANTS.ENVIRONMENTS.QA;
   }
 }
-
-export default AppsUtils;

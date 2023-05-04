@@ -1,7 +1,7 @@
 import debugFactory from 'debug';
 import CustomError from '../custom/error.custom.js';
 
-class ExpressHelper {
+export default class ExpressHelper {
   constructor() {
     throw new CustomError({ message: 'Cannot create an instance of a static class' });
   }
@@ -65,5 +65,3 @@ class ExpressHelper {
     }
   };
 }
-
-export default ExpressHelper;

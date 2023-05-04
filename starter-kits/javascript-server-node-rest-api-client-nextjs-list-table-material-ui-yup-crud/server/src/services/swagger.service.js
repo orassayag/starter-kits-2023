@@ -3,7 +3,7 @@ import swaggerUi from 'swagger-ui-express';
 import packageJSON from '../../package.json' assert { type: "json" };
 import CustomError from '../custom/error.custom.js';
 
-class SwaggerService {
+export default class SwaggerService {
   constructor() {
     throw new CustomError({ message: 'Cannot create an instance of a static class' });
   }
@@ -41,5 +41,3 @@ class SwaggerService {
     };
   }
 }
-
-export default SwaggerService;
