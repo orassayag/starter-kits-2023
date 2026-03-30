@@ -2,20 +2,36 @@
   "name": "client-nextjs-list-table-material-ui-yup-crud-custom-hooks",
   "version": "0.1.0",
   "private": false,
-  "description": "Client project with next.js, material-table, yup, to show CRUD actions.",
+  "description": "A Next.js client boilerplate with Material-UI, Yup validation, and custom React hooks pattern. Enhanced version with better code organization and reusability for CRUD operations.",
   "repository": {
     "type": "git",
-    "url": "git://github.com/orassayag/###.git"
+    "url": "git://github.com/orassayag/starter-kits-2023.git"
   },
   "keywords": [
     "react",
+    "nextjs",
     "next.js",
+    "material-ui",
     "material-table",
     "yup",
+    "validation",
+    "custom-hooks",
+    "react-hooks",
     "table",
     "list",
-    "CRUD"
+    "crud",
+    "boilerplate",
+    "starter-kit",
+    "admin-panel",
+    "dashboard",
+    "data-management",
+    "typescript",
+    "javascript",
+    "jsx",
+    "scss",
+    "sass"
   ],
+  "license": "MIT",
   "author": "Or Assayag <orassayag@gmail.com>",
   "contributors": [
     {

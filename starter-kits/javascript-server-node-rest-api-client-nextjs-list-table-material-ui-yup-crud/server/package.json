@@ -1,13 +1,35 @@
 {
-  "name": "server",
+  "name": "server-node-express-rest-api-crud",
   "version": "0.1.0",
   "private": false,
-  "description": "A server project with express.js to perform CRUD actions.",
+  "description": "A Node.js/Express.js REST API server with full CRUD operations, Swagger documentation, Joi validation, and Winston logging. Integrates with dummy data API for rapid prototyping.",
   "repository": {
     "type": "git",
-    "url": "git://github.com/orassayag/###.git"
+    "url": "git://github.com/orassayag/starter-kits-2023.git"
   },
-  "keywords": [],
+  "keywords": [
+    "nodejs",
+    "node.js",
+    "express",
+    "expressjs",
+    "rest-api",
+    "api",
+    "crud",
+    "swagger",
+    "openapi",
+    "joi",
+    "validation",
+    "winston",
+    "logging",
+    "middleware",
+    "boilerplate",
+    "starter-kit",
+    "backend",
+    "server",
+    "javascript",
+    "es6",
+    "esm"
+  ],
   "license": "MIT",
   "author": "Or Assayag <orassayag@gmail.com>",
   "contributors": [
