@@ -1,0 +1,54 @@
+{
+  "name": "starter-kits-2023",
+  "version": "1.0.0",
+  "private": false,
+  "description": "A comprehensive collection of React/Next.js and Node.js starter kits for rapid application development. These boilerplates provide production-ready templates for building modern web applications with CRUD functionality, perfect for job interviews, prototypes, or production projects.",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/orassayag/starter-kits-2023.git"
+  },
+  "keywords": [
+    "React.js",
+    "Next.js",
+    "Node.js",
+    "Express.js",
+    "Material-UI",
+    "Yup",
+    "Joi",
+    "SCSS",
+    "CRUD",
+    "starter",
+    "kits",
+    "starter-kits-2023"
+  ],
+  "license": "MIT",
+  "author": "Or Assayag <orassayag@gmail.com>",
+  "contributors": [
+    {
+      "name": "Or Assayag",
+      "email": "orassayag@gmail.com",
+      "url": "https://github.com/orassayag"
+    }
+  ],
+  "files": [
+    "sources",
+    "src",
+    ".github",
+    ".vscode",
+    ".gitignore",
+    "CONTRIBUTING.md",
+    "INSTRUCTIONS.md",
+    "LICENSE",
+    "README.md",
+    "package.json"
+  ],
+  "scripts": {
+    "stop": "taskkill -f -im node.exe"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
